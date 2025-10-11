@@ -31,7 +31,9 @@ Or, rewrite the esdoc code.
     const regexp = new RegExp(`[~]${name.replace(/[\(\)]/g, "").replace('*', '\\*')}$`); // if name is `*`, need to escape.
     if (kind) {
 ```
+*/
 
+/*
 ## ESdoc memo 2
 
 An error occurs if the following is written.
@@ -85,9 +87,20 @@ const batch = function () {
 	}
 	NTFile.copy(target_file, target_file_org);
 	const text = NTFile.loadTextFile(target_file).split(/[\r\n]/);
+
+	// バッチ1
 	for (let i = 0; i < text.length; i++) {
 		const line = text[i];
-		// バッチ
+		if (line.indexOf("// if name is `*`, need to escape.") !== -1) {
+			const codeLine = `const regexp = new RegExp(\`[~]\${name.replace(/[\\\(\\\)]/g, "").replace('*', '\\\\*')}$\`); // if name is \`*\`, need to escape.`;
+			text.splice(i, 1, codeLine);
+			break;
+		}
+	}
+
+	// バッチ2
+	for (let i = 0; i < text.length; i++) {
+		const line = text[i];
 		if (line.startsWith("    // e.g. function(a: number, b: string): boolean")) {
 			const push_text = [
 				// @type {import("./aaa/bbb.js").XXX} といった書き方を許可
@@ -103,7 +116,7 @@ const batch = function () {
 				"matched = typeName2.match(/function *\\((.*?)\\)(.*)/);"
 			];
 			text.splice(i + 1, 1, push_text.join("\n"));
-			i++;
+			break;
 		}
 	}
 	NTFile.saveTextFile(target_file, text.join("\n"));

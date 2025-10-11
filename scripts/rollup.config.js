@@ -1,5 +1,6 @@
-import buble from "@rollup/plugin-buble";
-import uglify from "@lopatnov/rollup-plugin-uglify";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import terser from "@rollup/plugin-terser";
 
 /**
  * 公開用ファイルの設定データを作成
@@ -21,21 +22,23 @@ const createData = function (moduleName, input_name, output_name, format, isUgli
 	 */
 	data.plugins = [];
 
-	if (format === "umd" || format === "cjs") {
-		data.plugins.push(buble());
-	}
+	data.plugins.push(resolve()); // node_modules を解決
+	data.plugins.push(commonjs()); // CommonJS を解決
+
 	if (isUglify) {
-		data.plugins.push(uglify());
+		data.plugins.push(terser());
 	}
 
 	return data;
 };
 
+const name = "NTFile";
+const input = "./src/NTFile.js";
 const data = [];
 
-data.push(createData("Test", "./src/index.js", "./build/cjs/index.js", "cjs", false));
-data.push(createData("Test", "./src/index.js", "./build/cjs/index.min.js", "cjs", true));
-data.push(createData("Test", "./src/index.js", "./build/esm/index.js", "esm", false));
-data.push(createData("Test", "./src/index.js", "./build/esm/index.min.js", "esm", true));
+data.push(createData(name, input, "./build/cjs/" + name + ".js", "cjs", false));
+data.push(createData(name, input, "./build/cjs/" + name + ".min.js", "cjs", true));
+data.push(createData(name, input, "./build/esm/" + name + ".js", "esm", false));
+data.push(createData(name, input, "./build/esm/" + name + ".min.js", "esm", true));
 
 export default data;

@@ -388,11 +388,5 @@ window.esdocSearchIndex = [
     "class/src/NTFile.js~NTFile.html#static-method-saveTextFileWithBOM",
     "src/NTFile.js~NTFile.saveTextFileWithBOM",
     "method"
-  ],
-  [
-    "src/index.js",
-    "file/src/index.js.html",
-    "src/index.js",
-    "file"
   ]
 ]

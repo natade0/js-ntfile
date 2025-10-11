@@ -1,6 +1,6 @@
 /**
- * NTFile.js
- * Copyright 2013-2023 natade < https://github.com/natade-jp >
+ * NTFile
+ * Copyright 2025 natade < https://github.com/natade-jp >
  *
  * The MIT license.
  * https://opensource.org/licenses/MIT

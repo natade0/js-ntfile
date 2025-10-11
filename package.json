@@ -1,6 +1,6 @@
 {
 	"name": "ntfile",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Library to read/write files.",
 	"keywords": [
 		"file"
@@ -11,12 +11,12 @@
 		"url": "git+https://github.com/natade-jp/js-ntfile.git"
 	},
 	"license": "MIT",
-	"source": "./src/index.js",
-	"main": "./build/esm/index.js",
+	"source": "./src/NTFile.js",
+	"main": "./build/esm/NTFile.js",
 	"exports": {
 		".": {
-			"import": "./build/esm/index.js",
-			"require": "./build/cjs/index.js"
+			"import": "./build/esm/NTFile.js",
+			"require": "./build/cjs/NTFile.js"
 		}
 	},
 	"type": "module",
@@ -59,19 +59,21 @@
 	},
 	"homepage": "https://github.com/natade-jp/js-ntfile",
 	"devDependencies": {
-		"@lopatnov/rollup-plugin-uglify": "^2.1.5",
 		"@rollup/plugin-buble": "^1.0.2",
+		"@rollup/plugin-commonjs": "^28.0.6",
+		"@rollup/plugin-node-resolve": "^16.0.2",
+		"@rollup/plugin-terser": "^0.4.4",
 		"@types/jest": "^29.5.4",
 		"babel-jest": "^29.6.4",
 		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
 		"esdoc": "^1.1.0",
 		"esdoc-standard-plugin": "^1.0.0",
-		"eslint": "^8.48.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-jest": "^27.2.3",
+		"eslint": "^9.37.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-jest": "^29.0.1",
 		"jest": "^29.6.4",
 		"jsdoc": "^4.0.2",
 		"prettier": "^3.0.2",
-		"rollup": "^3.28.1"
+		"rollup": "^3.29.5"
 	}
 }
