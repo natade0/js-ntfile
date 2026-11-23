@@ -1,6 +1,6 @@
 /**
  * NTFile
- * Copyright 2025 natade < https://github.com/natade-jp >
+ * Copyright 2025 natade < https://github.com/natade0 >
  *
  * The MIT license.
  * https://opensource.org/licenses/MIT

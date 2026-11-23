@@ -5,10 +5,10 @@
 	"keywords": [
 		"file"
 	],
-	"author": "natade-jp <natade3@gmail.com> (https://github.com/natade-jp)",
+	"author": "natade0 <natade3@gmail.com> (https://github.com/natade0)",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/natade-jp/js-ntfile.git"
+		"url": "git+https://github.com/natade0/js-ntfile.git"
 	},
 	"license": "MIT",
 	"source": "./src/NTFile.js",
@@ -31,7 +31,7 @@
 		"build": "./build"
 	},
 	"bugs": {
-		"url": "https://github.com/natade-jp/js-ntfile/issues"
+		"url": "https://github.com/natade0/js-ntfile/issues"
 	},
 	"jest": {
 		"verbose": true,
@@ -57,7 +57,7 @@
 			}
 		}
 	},
-	"homepage": "https://github.com/natade-jp/js-ntfile",
+	"homepage": "https://github.com/natade0/js-ntfile",
 	"devDependencies": {
 		"@rollup/plugin-buble": "^1.0.2",
 		"@rollup/plugin-commonjs": "^28.0.6",

@@ -1,5 +1,5 @@
 # NTFile
-[![ESDoc coverage badge](https://natade-jp.github.io/js-ntfile/badge.svg)](https://natade-jp.github.io/js-ntfile/)
+[![ESDoc coverage badge](https://natade0.github.io/js-ntfile/badge.svg)](https://natade0.github.io/js-ntfile/)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 - Node.js用のファイルの読み書きライブラリ
@@ -19,7 +19,7 @@ import NTFile from "ntfile";
 
 # Docs
 
-https://natade-jp.github.io/js-ntfile/
+https://natade0.github.io/js-ntfile/
 
 # Example
 
